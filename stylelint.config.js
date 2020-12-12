@@ -1,6 +1,20 @@
 module.exports = {
-  extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
-  // add your custom config here
+  syntax: 'scss',
+  plugins: ['stylelint-scss'],
+  extends: [
+    'stylelint-config-standard',
+    'stylelint-config-prettier',
+    'stylelint-config-lost',
+  ],
   // https://stylelint.io/user-guide/configuration
-  rules: {},
+  rules: {
+    'unicode-bom': 'never',
+    'at-rule-no-unknown': null,
+    'scss/at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: ['lost'],
+      },
+    ],
+  },
 }
