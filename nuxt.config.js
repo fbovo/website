@@ -30,7 +30,7 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: ['~/assets/scss/critical.scss', '~/assets/scss/main.scss'],
+  css: ['~/assets/scss/critical.scss'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
@@ -83,7 +83,7 @@ export default {
     // https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',
     // https://github.com/Gomah/nuxt-graphql-request
-    'nuxt-graphql-request',
+    // 'nuxt-graphql-request',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -130,20 +130,5 @@ export default {
       offlineAnalytics: true,
       offlineStrategy: 'StaleWhileRevalidate',
     },
-  },
-
-  // GraphQL client configuration (https://github.com/Gomah/nuxt-graphql-request)
-  graphql: {
-    endpoint: 'https://graphql.prepr.io/graphql', // https://cdn.prepr.io
-    // GraphQL request options (https://github.com/prisma-labs/graphql-request#passing-more-options-to-fetch)
-    options: {
-      headers: {
-        authorization:
-          'Bearer 3dcb020296d881ce406cfaf48638f779b2d057fb35a4ed0450029e92fe901ef1',
-      },
-      mode: 'cors',
-    },
-    useFetchPolyfill: true,
-    includeNodeModules: true,
   },
 }

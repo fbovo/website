@@ -10,11 +10,11 @@ export default Vue.extend({
     to: {
       type: String,
       required: true,
-    } as PropOptions<String>,
+    } as PropOptions<string>,
     type: {
       type: String,
       default: '',
-    } as PropOptions<String>,
+    } as PropOptions<string>,
   },
 
   render: (h, { props, data, children }) => {
