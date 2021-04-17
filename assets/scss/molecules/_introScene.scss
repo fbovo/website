@@ -1,0 +1,59 @@
+.m-introScene {
+  overflow: hidden;
+  width: 100%;
+  // padding-top: 100%; /// preserve ratio
+  position: relative;
+
+  @include media('>120em') {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1920px;
+    overflow: visible;
+  }
+
+  .m-introScene__space {
+    width: 100%;
+    min-width: 220%;
+    margin-left: -10%;
+    margin-right: -10%;
+
+    @include media('>medium') {
+      min-width: 120%;
+      margin-left: -10%;
+      margin-right: -10%;
+    }
+    @include media('>120em') {
+      min-width: 115%;
+      margin-right: 0;
+    }
+  }
+
+  .m-introScene__content {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 80%;
+    height: 90%;
+    font-size: $h3;
+    letter-spacing: 0.01em;
+    color: var(--white);
+    text-align: center;
+
+    @include media('>small') {
+      font-size: 5em;
+    }
+    @include media('>medium') {
+      text-align: left;
+    }
+
+    p {
+      margin: 0;
+
+      strong {
+        font-weight: 300;
+        display: block;
+        color: var(--red-raspberry);
+      }
+    }
+  }
+}

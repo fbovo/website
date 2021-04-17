@@ -1,0 +1,56 @@
+:root {
+  --shadow: rgba(34, 34, 34, 0.5);
+  --white: #fff;
+  --blue-deep-space: #142131;
+  --blue-space: #1d2e42;
+  --blue-near-space: #27394f;
+  --red-raspberry: #ed5565;
+  --red-raspberry-mature: #da4453;
+  --grey-concrete: #e6e9ed;
+  --grey-concrete-wet: #ccd1d9;
+}
+
+@import 'normalize';
+
+body {
+  font-size: 1em;
+  font-size: 4.26667vw;
+  line-height: 1.5;
+  color: var(--blue-deep-space);
+
+  @include media('>small') {
+    font-size: 1.125em;
+    font-size: 2.34375vw;
+  }
+  @include media('>medium') {
+    font-size: 1.25em;
+    font-size: 1.38889vw;
+  }
+  @include media('>120em') {
+    font-size: 1.66875em; // 1.04167vw;
+  }
+}
+
+a {
+  color: inherit;
+}
+
+@import 'states/hasModal';
+
+@import 'atoms/cta';
+@import 'atoms/email';
+@import 'atoms/planet';
+// @import 'atoms/icons/iconMenuMain';
+
+@import 'molecules/aboutOverlay';
+@import 'molecules/aboutPlanet';
+@import 'molecules/aboutProjects';
+@import 'molecules/aboutSkills';
+@import 'molecules/contactInfo';
+@import 'molecules/introScene';
+
+@import 'organisms/header';
+@import 'organisms/headerMenu';
+@import 'organisms/homeAbout';
+@import 'organisms/homeContact';
+@import 'organisms/homeIntro';

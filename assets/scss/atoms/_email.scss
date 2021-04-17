@@ -1,0 +1,27 @@
+.a-email {
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    color: var(--red-raspberry);
+
+    &::before {
+      content: attr(data-n) '@' attr(data-d) '.' attr(data-t);
+    }
+    &::after {
+      content: '';
+      height: .075em;
+      background: var(--red-raspberry);
+      display: block;
+      transition: width 0.25s ease-in-out;
+      margin: -.075em auto 0;
+      width: 0;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}

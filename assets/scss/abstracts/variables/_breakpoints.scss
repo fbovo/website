@@ -1,0 +1,15 @@
+/// Doc: https://eduardoboucas.github.io/include-media/documentation/
+/// ≥ 43em (688px, tablet)
+/// ≥ 62em (992px, desktop S)
+/// ≥ 82em (1312px, desktop XL)
+/// max 120em (1920px)
+$breakpoints: (small: 43em, medium: 62em, large: 82em, mobile: 23.4375em, tablet: 48em, desktop: 90em);
+
+// /* Inclusive and exclusive operators for a finer control over the intervals */
+// @include media(">phone", "<=tablet") {
+// width: 50%;
+// }
+// /* Use ligatured operators if you fancy a slicker declaration */
+// @include media("≥phone", "≤tablet") {
+// line-height: 1.5;
+// }

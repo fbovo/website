@@ -1,0 +1,57 @@
+.m-aboutOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  overflow-y: scroll;
+  z-index: 10;
+  background: var(--grey-concrete);
+  display: none;
+  opacity: 0;
+  animation: m-aboutOverlayAnimation .35s cubic-bezier(0.65, 0, .075, 1);
+  animation-fill-mode: backwards;
+
+  .m-aboutOverlay__close,
+  .m-aboutOverlay__content {
+    width: 100%;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: $gutter;
+  }
+
+  .m-aboutOverlay__close {
+    text-align: right;
+    cursor: pointer;
+
+    svg {
+      display: inline-block;
+      width: 2em;
+
+      g {
+        fill: var(--blue-deep-space);
+      }
+    }
+  }
+
+  .m-aboutOverlay__content {
+    color: var(--blue-deep-space);
+  }
+
+  &.-active {
+    display: block;
+    animation-fill-mode: forwards;
+    animation-delay: .35s;
+  }
+}
+
+@keyframes m-aboutOverlayAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

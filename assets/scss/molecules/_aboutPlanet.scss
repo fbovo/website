@@ -1,0 +1,120 @@
+.m-aboutPlanet {
+  position: relative;
+  perspective: 100px;
+  perspective-origin: 2.5em 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white);
+  font-size: $h5;
+  letter-spacing: .01em;
+  cursor: pointer;
+
+  @include media('>small') {
+    flex-direction: row;
+    font-size: $h4;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -.5em;
+    left: -.5em;
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    background: var(--grey-concrete);
+    transition: transform .35s cubic-bezier(0.65, 0, .075, 1);
+    z-index: 9;
+    opacity: 0;
+  }
+
+  @include media('>small') {
+    &::after {
+      left: .5em;
+    }
+  }
+
+  svg {
+    width: 15vw;
+    max-width: 3.5em;
+
+    @include media('>small') {
+      margin: -.5em .5em;
+    }
+  }
+
+  strong {
+    font-weight: 300;
+    display: inline-block;
+    color: var(--red-raspberry);
+
+    &::after {
+      content: '';
+      height: .075em;
+      background: var(--red-raspberry);
+      display: block;
+      transition: width 0.25s ease-in-out;
+      margin: -.075em auto 0;
+      width: 0;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &.-skills {
+    margin-left: 10%;
+  }
+  &.-projects {
+    flex-direction: row-reverse;
+    perspective-origin: calc(100% - 2.5em) 50%;
+
+    &::after {
+      left: initial;
+      right: 0;
+      top: -1em;
+    }
+
+    @include media('>small') {
+      &::after {
+        right: .5em;
+        top: -.5em;
+      }
+    }
+
+    svg {
+      margin: -.5em .5em;
+    }
+  }
+  &.-education {
+    flex-direction: column-reverse;
+
+    &::after {
+      top: initial;
+      bottom: -.5em;
+      left: 50%;
+      margin-left: -1.75em;
+    }
+
+    @include media('>small') {
+      flex-direction: row;
+
+      &::after {
+        top: -.5em;
+        bottom: initial;
+        left: .5em;
+        margin-left: 0;
+      }
+    }
+  }
+  &.-active::after {
+    opacity: 1;
+    transform: translateZ(100px);
+  }
+}

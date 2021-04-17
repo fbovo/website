@@ -1,0 +1,13 @@
+html {
+  border-top: 4px solid #128ab2;
+
+  @include media('>small') {
+    border-top-color: #04d6a0;
+  }
+  @include media('>medium') {
+    border-top-color: #ffd166;
+  }
+  @include media('>large') {
+    border-top-color: #ee476f;
+  }
+}

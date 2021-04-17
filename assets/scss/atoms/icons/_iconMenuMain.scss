@@ -1,0 +1,41 @@
+.a-iconMenuMain {
+  color: inherit;
+
+  .a-iconMenuMain__open {
+    > circle {
+      stroke: var(--blue-deep-space);
+    }
+  }
+
+  .a-iconMenuMain__close {
+    display: none;
+  }
+
+  &:hover {
+    .a-iconMenuMain__open {
+      > circle {
+        animation: bounce 1.5s 0s infinite;
+        transition: animation 1.5s;
+
+        &:nth-child(2) {
+          animation-delay: 0.2s;
+        }
+        &:nth-child(3) {
+          animation-delay: 0.4s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-1em);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}

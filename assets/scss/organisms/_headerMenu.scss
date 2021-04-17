@@ -1,0 +1,145 @@
+.o-headerMenu {
+  text-align: right;
+
+  .o-headerMenu__toggler {
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 5em;
+      height: 5em;
+      z-index: -1;
+      border-radius: 50%;
+      background: var(--white);
+      transform: translate(-50%, -50%);
+    }
+
+    svg {
+      display: block;
+      width: 2.4em;
+      margin-left: auto;
+      margin-right: auto;
+
+      circle {
+        stroke: var(--blue-deep-space);
+      }
+    }
+  }
+
+  .o-headerMenu__content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    /// Reset
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    pointer-events: none;
+
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      z-index: -1;
+      background: var(--blue-deep-space);
+      transition: width 0.2s ease, height 0.2s ease;
+      transition-delay: 0.3s;
+    }
+
+    > li {
+      width: 100%;
+      padding: $gutter;
+      font-size: $h5;
+      letter-spacing: 0.05em;
+      color: var(--white);
+      transform: translateX(100%);
+      transition: transform 0.2s ease;
+
+      &:first-child {
+        margin-top: 10px;
+        cursor: pointer;
+
+        svg {
+          width: 2em;
+
+          g {
+            fill: var(--white);
+          }
+        }
+      }
+      &:nth-child(2) {
+        margin-top: 1em;
+        transition-delay: 0.3s;
+      }
+      &:nth-child(3) {
+        transition-delay: 0.2s;
+      }
+      &:nth-child(4) {
+        transition-delay: 0.1s;
+      }
+
+      a {
+        text-decoration: none;
+        display: inline-block;
+
+        &::after {
+          content: '';
+          height: .075em;
+          background: var(--white);
+          display: block;
+          transition: width 0.25s ease-in-out;
+          margin: -.075em auto 0;
+          width: 0;
+        }
+
+        &:hover {
+          text-decoration: none;
+
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  // States
+  &.-isOpen {
+    .o-headerMenu__content {
+      pointer-events: all;
+
+      &::after {
+        width: 100vw;
+        height: 100vh;
+        transition-delay: 0s;
+      }
+
+      > li {
+        transform: translateX(0);
+
+        &:nth-child(2) {
+          transition-delay: 0.1s;
+        }
+        &:nth-child(3) {
+          transition-delay: 0.2s;
+        }
+        &:nth-child(4) {
+          transition-delay: 0.3s;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,193 @@
+$normalize__fontFamily: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji' !default;
+$normalize__fontFamily--mono: ui-monospace, 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace !default;
+
+*,
+*::before,
+*::after {
+  /// Use a better box model (opinionated).
+	box-sizing: border-box;
+}
+
+:root {
+  /// Use a more readable tab size (opinionated).
+	-moz-tab-size: 4;
+	tab-size: 4;
+}
+
+:-moz-ui-invalid {
+  /// Remove the additional ':invalid' styles in Firefox.
+	box-shadow: none;
+}
+
+html {
+  /// Correct the line height in all browsers.
+  line-height: 1.15;
+  /// Prevent adjustments of font size after orientation changes in iOS.
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  /// Remove the margin in all browsers.
+	margin: 0;
+  /// Improve consistency of default fonts in all browsers.
+	font-family: $normalize__fontFamily;
+}
+
+main {
+  /// Render the `main` element consistently in IE.
+  display: block;
+}
+
+hr {
+  /// Add the correct height in Firefox.
+  height: 0;
+  /// Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+  color: inherit;
+  /// Show the overflow in Edge and IE.
+  overflow: visible;
+}
+
+abbr[title] {
+  /// Add the correct text decoration in Chrome, Edge, and Safari.
+	text-decoration: underline dotted;
+}
+
+b,
+strong {
+  /// Add the correct font weight in Edge and Safari.
+	font-weight: bolder;
+}
+
+code,
+kbd,
+samp,
+pre {
+  /// Improve consistency of default fonts in all browsers
+  font-family: $normalize__fontFamily--mono;
+  font-size: 1em;
+}
+
+small {
+  /// Add the correct font size in all browsers.
+	font-size: 80%;
+}
+
+sub,
+sup {
+  /// Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sub {
+	bottom: -0.25em;
+}
+sup {
+	top: -0.5em;
+}
+
+table {
+  /// Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+  text-indent: 0;
+  /// Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+	border-color: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  /// Change the font styles in all browsers.
+	font-family: inherit;
+	font-size: 100%;
+  line-height: 1.15;
+  /// Remove the margin in Firefox and Safari.
+	margin: 0;
+}
+
+button,
+input {
+  /// Show the overflow in Edge.
+  overflow: visible;
+}
+
+button,
+select {
+  /// Remove the inheritance of text transform in Firefox.
+	text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  /// Correct the inability to style clickable types in iOS and Safari.
+  -webkit-appearance: button;
+
+  &::-moz-focus-inner {
+    /// Remove the inner border and padding in Firefox.
+    border-style: none;
+    padding: 0;
+  }
+
+  &:-moz-focusring {
+    /// Restore the focus styles unset by the previous rule.
+    outline: 1px dotted ButtonText;
+  }
+}
+
+[type="number"] {
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    /// Correct the cursor style of increment and decrement buttons in Safari.
+    height: auto;
+  }
+}
+
+[type="search"] {
+  /// Correct the odd appearance in Chrome and Safari.
+  -webkit-appearance: textfield;
+  /// Correct the outline style in Safari.
+	outline-offset: -2px; /* 2 */
+
+  &::-webkit-search-decoration {
+    /// Remove the inner padding in Chrome and Safari on macOS.
+    -webkit-appearance: none;
+  }
+}
+
+[type="file"] {
+  &::-webkit-file-upload-button {
+    /// Correct the inability to style clickable types in iOS and Safari.
+    -webkit-appearance: button;
+    /// Change font properties to 'inherit' in Safari.
+    font: inherit; /* 2 */
+  }
+}
+
+legend {
+  /// Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+	padding: 0;
+}
+
+progress {
+  /// Add the correct vertical alignment in Chrome and Firefox.
+	vertical-align: baseline;
+}
+
+details {
+  /// Add the correct display in Edge, IE 10+, and Firefox.
+  display: block;
+}
+
+summary {
+  /// Add the correct display in Chrome and Safari.
+	display: list-item;
+}
+
+template {
+  /// Add the correct display in IE 10+.
+  display: none;
+}

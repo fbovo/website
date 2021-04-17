@@ -1,0 +1,47 @@
+.a-cta {
+  display: inline-block;
+  position: relative;
+  padding: .825em 1.65em;
+  min-width: 9em;
+  font-size: 1em;
+  line-height: 1.5em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .0825em;
+  font-weight: 500;
+  white-space: normal;
+  vertical-align: middle;
+  outline: 0;
+  cursor: pointer;
+  color: var(--white);
+  background: var(--blue-deep-space);
+  border: .1em solid var(--blue-deep-space);
+  border-radius: 2.5em;
+  transition: all .35s cubic-bezier(0.65, 0, .075, 1);
+
+  > span {
+    outline: 0;
+    display: block;
+    padding: .825em 1.65em;
+    margin: -.825em -1.65em;
+  }
+
+  &:focus {
+    outline: 0.1em solid var(--red-raspberry);
+    outline-offset: 0.25em;
+  }
+  &:hover {
+    box-shadow: 0 0 .825em 0 var(--shadow);
+    color: var(--white);
+  }
+
+  &.-empty {
+    background-color: transparent;
+    color: var(--blue-deep-space);
+
+    &:hover {
+      color: var(--blue-deep-space);
+    }
+  }
+}

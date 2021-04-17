@@ -1,0 +1,11 @@
+.m-contactInfo {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 $gutter 1em;
+  font-size: $h5;
+
+  @include media('>small') {
+    font-size: $h4;
+  }
+}
