@@ -37,6 +37,8 @@ export default Vue.extend({
       if (process.client && !this.isBot) {
         const data = event.target.dataset
         window.location.href = 'mailto:' + data.n + '@' + data.d + '.' + data.t
+
+        if (window.beampipe) window.beampipe('contact')
       }
     },
   },
