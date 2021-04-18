@@ -18,11 +18,7 @@
     "fitty": "^2.3.3",
     "nm8": "^0.2.0",
     "nuxt": "^2.14.6",
-    "vue-component-media-queries": "^1.0.0",
-    "vue-lazy": "^0.2.4",
-    "vue-observe-visibility": "^1.0.0",
-    "vue-scrollactive": "^0.9.3",
-    "vue-window-size": "0.6.2"
+    "vue-scrollactive": "^0.9.3"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.6",
@@ -44,8 +40,6 @@
     "jest": "^26.5.0",
     "node-sass": "^5.0.0",
     "nuxt-graphql-request": "^3.2.0",
-    "postcss-custom-media": "^7.0.8",
-    "postcss-pxtorem": "^5.1.1",
     "prettier": "^2.1.2",
     "sass-loader": "^10.1.0",
     "stylelint": "^13.7.2",
