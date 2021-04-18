@@ -53,6 +53,10 @@
           <abbr>Ma</abbr>
           <strong>Magento 2</strong>
         </li>
+        <li>
+          <abbr>Gtm</abbr>
+          <strong>Google Tag Manager</strong>
+        </li>
       </ul>
     </div>
   </div>

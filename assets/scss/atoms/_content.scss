@@ -1,0 +1,26 @@
+.a-content {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 1em $gutter;
+
+  h1 {
+    font-size: $h4;
+
+    @include media('>small') {
+      font-size: $h3;
+    }
+  }
+
+  h2 {
+    font-size: $h5;
+
+    @include media('>small') {
+      font-size: $h4;
+    }
+  }
+
+  b {
+    font-weight: 700;
+  }
+}
