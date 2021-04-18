@@ -14,7 +14,18 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Filippo Bovo: e-commerce solution architect, agile full-stack web developer and team leader',
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'filippo bovo,full-stack,developer,frontend,backend,team leader,agile,scrum,e-commerce,magento,javascript,typescript,php,vue,vuejs,nuxt',
+      },
     ],
     link: [
       {
@@ -23,8 +34,36 @@ export default {
         href: '/favicon.ico',
       },
       {
-        rel: 'stylesheet',
+        rel: 'preconnect',
+        crossorigin: 'anonymous',
+        href: 'https://fonts.gstatic.com',
+      },
+      {
+        rel: 'preload',
+        as: 'style',
         href: 'https://fonts.googleapis.com/css?family=Montserrat&display=swap',
+      },
+      {
+        rel: 'stylesheet',
+        media: 'print',
+        href: 'https://fonts.googleapis.com/css?family=Montserrat&display=swap',
+        onload: 'this.onload=null;this.removeAttribute("media");',
+      },
+    ],
+    noscript: [
+      {
+        innerHTML:
+          '<link rel="stylesheet href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" />',
+      },
+    ],
+    script: [
+      {
+        src: 'https://beampipe.io/js/tracker.js',
+        body: true,
+        async: true,
+        defer: true,
+        'data-beampipe-domain':
+          process.env.BEAMPIPE_DOMAIN || 'filippobovo.com',
       },
     ],
   },
