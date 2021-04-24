@@ -9,14 +9,14 @@
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: .0825em;
-  font-weight: 500;
+  font-weight: $bold;
   white-space: normal;
   vertical-align: middle;
   outline: 0;
   cursor: pointer;
   color: var(--white);
   background: var(--blue-deep-space);
-  border: .1em solid var(--blue-deep-space);
+  border: .15em solid var(--blue-deep-space);
   border-radius: 2.5em;
   transition: all .35s cubic-bezier(0.65, 0, .075, 1);
 

@@ -19,43 +19,43 @@
       <ul>
         <li>
           <abbr>Js</abbr>
-          <strong>JavaScript / TypeScript (ES6)</strong>
+          <h2>JavaScript / TypeScript (ES6)</h2>
         </li>
         <li>
           <abbr>Css</abbr>
-          <strong>Sass/Scss, Less</strong>
+          <h2>Sass/Scss, Less</h2>
         </li>
         <li>
           <abbr>Vue</abbr>
-          <strong>Vuejs, Nuxt</strong>
+          <h2>Vuejs, Nuxt</h2>
         </li>
         <li>
           <abbr>Php</abbr>
-          <strong>PHP</strong>
+          <h2>PHP</h2>
         </li>
         <li>
           <abbr>Go</abbr>
-          <strong>Golang</strong>
+          <h2>Golang</h2>
         </li>
         <li>
           <abbr>Ag</abbr>
-          <strong>Agile</strong>
+          <h2>Agile</h2>
         </li>
         <li>
           <abbr>Git</abbr>
-          <strong>Git, Subversion</strong>
+          <h2>Git, Subversion</h2>
         </li>
         <li>
           <abbr>Do</abbr>
-          <strong>Docker</strong>
+          <h2>Docker</h2>
         </li>
         <li>
           <abbr>Ma</abbr>
-          <strong>Magento 2</strong>
+          <h2>Magento 2</h2>
         </li>
         <li>
           <abbr>Gtm</abbr>
-          <strong>Google Tag Manager</strong>
+          <h2>Google Tag Manager</h2>
         </li>
       </ul>
     </div>

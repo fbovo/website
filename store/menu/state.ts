@@ -3,52 +3,18 @@ import { IMenuState } from './'
 export default (): IMenuState =>
   ({
     main: {
-      active: '',
+      active: false,
       modal: true,
-      items: [
-        {
-          label: 'Who I am',
-          anchor: '#intro',
-        },
-        {
-          label: 'Experience',
-          anchor: '#about',
-        },
-        {
-          label: 'Get in contact',
-          anchor: '#contact',
-        },
-      ],
+      overlay: false,
     },
     about: {
-      active: '',
+      active: false,
       modal: true,
-      items: [
-        {
-          label: 'Skills',
-          anchor: '#skills',
-          icon: 'Jupiter',
-        },
-        {
-          label: 'Projects',
-          anchor: '#projects',
-          icon: 'Jupiter',
-        },
-        {
-          label: 'Education and Awards',
-          anchor: '#education',
-          icon: 'Jupiter',
-        },
-      ],
+      overlay: false,
     },
     footer: {
-      active: '',
+      active: false,
       modal: false,
-      items: [
-        {
-          label: 'Privacy',
-          anchor: '/privacy-policy',
-        },
-      ],
+      overlay: false,
     },
   } as IMenuState)

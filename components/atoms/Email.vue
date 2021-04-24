@@ -19,14 +19,19 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue, { VueConstructor } from 'vue'
+import Analytics from '~/mixins/analytics'
 
 interface IComponentData {
   isBot: boolean
 }
 
-export default Vue.extend({
+export default (Vue as VueConstructor<
+  Vue & InstanceType<typeof Analytics>
+>).extend({
   name: 'EmailAtom',
+
+  mixins: [Analytics],
 
   data: (): IComponentData => ({
     isBot: false,
@@ -38,7 +43,7 @@ export default Vue.extend({
         const data = event.target.dataset
         window.location.href = 'mailto:' + data.n + '@' + data.d + '.' + data.t
 
-        if (window.beampipe) window.beampipe('contact')
+        this.trackEvent('click.email')
       }
     },
   },

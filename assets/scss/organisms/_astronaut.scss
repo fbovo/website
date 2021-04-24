@@ -1,0 +1,13 @@
+.o-astronaut {
+  position: fixed;
+  bottom: -2px;
+  right: 0;
+  width: 100%;
+  z-index: 20;
+  transform: translateY(100%);
+  transition: transform .35s cubic-bezier(0.65, 0, .075, 1);
+
+  &.-active {
+    transform: translateY(0);
+  }
+}

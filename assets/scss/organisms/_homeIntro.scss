@@ -16,6 +16,7 @@
 
     h1 {
       font-size: $h5;
+      font-weight: $regular;
       margin: 1em 0;
 
       @include media('>small') {

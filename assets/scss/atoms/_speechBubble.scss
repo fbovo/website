@@ -1,0 +1,23 @@
+.a-speechBubble {
+  position: relative;
+  display: inline-block;
+  padding: .5em;
+  background: var(--white);
+  color: var(--blue-deep-space);
+  border: .15em solid var(--blue-deep-space);
+  box-shadow: 0 0 0.2em 0 var(--shadow);
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: -1em;
+    top: 50%;
+    margin-top: -.25em;
+    border-left: .5em solid var(--blue-deep-space);
+    border-right: .5em solid transparent;
+    border-top: .5em solid var(--blue-deep-space);
+    border-bottom: .5em solid transparent;
+  }
+}

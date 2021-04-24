@@ -11,10 +11,19 @@
       <nav>
         <scrollactive tag="ul">
           <li>
-            <a-cta to="#about" class="scrollactive-item">Discover more</a-cta>
+            <a-cta
+              to="#about"
+              track="click.intro-about"
+              class="scrollactive-item"
+              >Discover more</a-cta
+            >
           </li>
           <li>
-            <a-cta to="#contact" type="empty" class="scrollactive-item"
+            <a-cta
+              to="#contact"
+              type="empty"
+              track="click.intro-contact"
+              class="scrollactive-item"
               >Contact me</a-cta
             >
           </li>

@@ -1,0 +1,24 @@
+@mixin anchor($color, $hover: true) {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  color: $color;
+
+  &::after {
+    content: '';
+    height: .075em;
+    background: $color;
+    display: block;
+    transition: width 0.25s ease-in-out;
+    margin: -.075em auto 0;
+    width: 0;
+  }
+
+  @if ($hover) {
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}

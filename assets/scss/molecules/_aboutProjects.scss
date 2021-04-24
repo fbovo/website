@@ -48,12 +48,12 @@
         padding: 0 $gutter;
         margin: 1em 0;
         text-align: right;
-        font-weight: 700;
+        font-weight: $bold;
 
         time {
           display: block;
           position: relative;
-          font-weight: 300;
+          font-weight: $light;
           font-size: $small;
 
           &::before {

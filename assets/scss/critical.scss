@@ -41,15 +41,20 @@ a {
 @import 'atoms/cta';
 @import 'atoms/email';
 @import 'atoms/planet';
+@import 'atoms/speechBubble';
 // @import 'atoms/icons/iconMenuMain';
 
+@import 'molecules/aboutEducation';
 @import 'molecules/aboutOverlay';
 @import 'molecules/aboutPlanet';
 @import 'molecules/aboutProjects';
 @import 'molecules/aboutSkills';
+@import 'molecules/astronaut';
 @import 'molecules/contactInfo';
 @import 'molecules/introScene';
 
+@import 'organisms/astronaut';
+@import 'organisms/footer';
 @import 'organisms/header';
 @import 'organisms/headerMenu';
 @import 'organisms/homeAbout';

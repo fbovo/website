@@ -14,18 +14,18 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content:
-          'Filippo Bovo: e-commerce solution architect, agile full-stack web developer and team leader',
-      },
-      {
-        hid: 'keywords',
-        name: 'keywords',
-        content:
-          'filippo bovo,full-stack,developer,frontend,backend,team leader,agile,scrum,e-commerce,magento,javascript,typescript,php,vue,vuejs,nuxt',
-      },
+      // {
+      //   hid: 'description',
+      //   name: 'description',
+      //   content:
+      //     'Filippo Bovo: e-commerce solution architect, agile full-stack web developer and team leader',
+      // },
+      // {
+      //   hid: 'keywords',
+      //   name: 'keywords',
+      //   content:
+      //     'filippo bovo,full-stack,developer,frontend,backend,team leader,agile,scrum,e-commerce,magento,javascript,typescript,php,vue,vuejs,nuxt',
+      // },
     ],
     link: [
       {
@@ -41,31 +41,35 @@ export default {
       {
         rel: 'preload',
         as: 'style',
-        href: 'https://fonts.googleapis.com/css?family=Montserrat&display=swap',
+        href:
+          'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap',
       },
       {
         rel: 'stylesheet',
         media: 'print',
-        href: 'https://fonts.googleapis.com/css?family=Montserrat&display=swap',
+        href:
+          'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap',
         onload: 'this.onload=null;this.removeAttribute("media");',
       },
     ],
     noscript: [
       {
+        pbody: false,
         innerHTML:
-          '<link rel="stylesheet href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" />',
+          '<link rel="stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap" />',
       },
     ],
     script: [
       {
         src: 'https://beampipe.io/js/tracker.js',
-        body: true,
+        body: false,
         async: true,
         defer: true,
         'data-beampipe-domain':
           process.env.BEAMPIPE_DOMAIN || 'filippobovo.com',
       },
     ],
+    __dangerouslyDisableSanitizers: ['noscript'],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -143,10 +147,15 @@ export default {
     },
   },
 
+  // router: {
+  //   middleware: ['language'],
+  // },
+
   // Style Resources configuration (https://github.com/nuxt-community/style-resources-module)
   styleResources: {
     scss: [
       './assets/scss/abstracts/variables/*.scss',
+      './assets/scss/abstracts/lib/*.scss',
       './node_modules/include-media/dist/_include-media.scss',
     ],
   },

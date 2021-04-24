@@ -1,7 +1,8 @@
 <template>
   <header class="o-header">
     <div class="o-header__menu">
-      <o-headerMenu />
+      <o-headerMenu v-if="!$slots.default" />
+      <slot />
     </div>
   </header>
 </template>

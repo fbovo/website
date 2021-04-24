@@ -4,17 +4,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
-// import { MediaQueryProvider } from 'vue-component-media-queries'
-
-// const queries = {
-//   mobile: '(max-width: 760px)'
-// }
 
 export default Vue.extend({
-  // components: {
-  //   MediaQueryProvider,
-  // },
-
   computed: {
     hasModal(): boolean {
       return this.$store.getters['menu/hasModal'] || false

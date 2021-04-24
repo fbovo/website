@@ -1,8 +1,13 @@
 <template>
   <article id="about" class="o-homeAbout">
-    <aside class="o-homeAbout__scene">
-      <a-sceneAbout />
-    </aside>
+    <section class="o-homeAbout__caption">
+      <strong>My mission: deliver neat work and enlightment</strong>
+      <p>
+        Because I'm a completely independent freelancer, I will not try to sell
+        you a fancy bespoke thing if you don’t need it. I will only ever
+        recommend what is best for your business.
+      </p>
+    </section>
     <nav class="o-homeAbout__menu">
       <ul>
         <li v-for="item in items" :key="item.anchor">
@@ -23,6 +28,7 @@
           >
             <m-aboutSkills v-if="item.anchor === '#skills'" />
             <m-aboutProjects v-else-if="item.anchor === '#projects'" />
+            <m-aboutEducation v-else-if="item.anchor === '#education'" />
           </m-aboutOverlay>
         </li>
       </ul>
@@ -32,56 +38,27 @@
 
 <script lang="ts">
 import Vue from 'vue'
-// import nm8 from 'nm8'
-import { IMenuItem } from '~/store/menu'
+import data from '~/data/menu/about'
 
 export default Vue.extend({
   name: 'HomeAboutOrganism',
 
-  data: () => ({
-    animation: undefined,
-  }),
+  data: () => data,
 
   computed: {
-    items(): IMenuItem[] {
-      return this.$store.state.menu.about.items || []
-    },
     active: {
       get(): string {
         return this.$store.state.menu.about.active || ''
       },
       set(payload: string): void {
-        this.$store.commit('menu/setActive', { menu: 'about', payload })
+        this.$store.commit('menu/setActive', {
+          menu: 'about',
+          payload,
+          modal: true,
+          overlay: false,
+        })
       },
     },
   },
-
-  // mounted() {
-  //   const el = this.$el // as HTMLElement
-
-  //   el.style.transform = 'translateY(-200%)'
-
-  //   this.animation = nm8((offset) => {
-  //     el.style.transform = `translateY(${-200 + offset * 200}%)`
-  //   }, 500)
-  // },
-
-  // methods: {
-  //   ...mapMutations('menu', ['setStatus']),
-  //   toggleStatus() {
-  //     this.setStatus({ menu: 'main', payload: !this.status })
-
-  //     if (process.client && document) {
-  //       const body: HTMLElement = document.body
-  //       const className: string = '-hasModal'
-
-  //       if (this.status) {
-  //         body.classList.add(className)
-  //       } else {
-  //         body.classList.remove(className)
-  //       }
-  //     }
-  //   },
-  // },
 })
 </script>

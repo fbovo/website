@@ -1,0 +1,26 @@
+.m-astronaut {
+  width: 100%;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .m-astronaut__scene {
+    flex: 0 0 20%;
+
+    svg {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .m-astronaut__speech {
+    flex: 0 0 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+}

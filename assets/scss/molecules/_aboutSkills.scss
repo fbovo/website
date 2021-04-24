@@ -13,12 +13,6 @@
     }
   }
 
-  // .m-aboutSkills__caption {
-  //   @include media('>medium') {
-  //     flex-basis: auto;
-  //   }
-  // }
-
   .m-aboutSkills__list {
     ul {
       display: flex;
@@ -49,9 +43,11 @@
           // padding-bottom: .25em;
         }
 
-        strong {
+        h2 {
           display: block;
-          font-weight: 300;
+          font-size: 1em;
+          font-weight: $regular;
+          margin: 0;
           min-height: 3em;
         }
       }
