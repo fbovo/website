@@ -1,6 +1,10 @@
 .o-homeIntro {
   margin-bottom: 5em;
 
+  @include media('>120em') {
+    overflow-x: hidden;
+  }
+
   .o-homeIntro__content {
     display: flex;
     flex-wrap: wrap;
