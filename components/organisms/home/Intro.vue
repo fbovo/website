@@ -11,10 +11,7 @@
       <nav>
         <scrollactive tag="ul">
           <li>
-            <a-cta
-              to="#about"
-              track="click.intro-about"
-              class="scrollactive-item"
+            <a-cta to="#about" track="intro-about" class="scrollactive-item"
               >Discover more</a-cta
             >
           </li>
@@ -22,7 +19,7 @@
             <a-cta
               to="#contact"
               type="empty"
-              track="click.intro-contact"
+              track="intro-contact"
               class="scrollactive-item"
               >Contact me</a-cta
             >

@@ -1,7 +1,7 @@
 import { MutationTree } from 'vuex'
-import { II18nState } from '.'
+import { ILocalState } from '.'
 
-const mutations: MutationTree<II18nState> = {
+const mutations: MutationTree<ILocalState> = {
   setCurrent(state, payload: string) {
     state.current = payload
   },

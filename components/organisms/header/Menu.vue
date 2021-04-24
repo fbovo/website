@@ -35,15 +35,10 @@ export default (Vue as VueConstructor<
   computed: {
     status: {
       get(): boolean {
-        return this.$store.state.menu.main.active
+        return this.$store.state.modal.main.active || false
       },
       set(payload: boolean): void {
-        this.$store.commit('menu/setActive', {
-          menu: 'main',
-          payload,
-          modal: true,
-          overlay: false,
-        })
+        this.$store.commit('modal/setActive', { main: payload })
       },
     },
   },

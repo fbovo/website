@@ -1,4 +1,4 @@
-export interface II18nState {
+export interface ILocalState {
   current: string
   available: Record<string, string>[]
 }

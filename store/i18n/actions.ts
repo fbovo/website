@@ -1,7 +1,7 @@
 import { ActionTree } from 'vuex'
-import { II18nState } from '.'
+import { ILocalState } from '.'
 import { IRootState } from '~/store'
 
-const actions: ActionTree<II18nState, IRootState> = {}
+const actions: ActionTree<ILocalState, IRootState> = {}
 
 export default actions

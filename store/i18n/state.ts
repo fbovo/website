@@ -1,6 +1,6 @@
-import { II18nState } from '.'
+import { ILocalState } from '.'
 
-export default (): II18nState =>
+export default (): ILocalState =>
   ({
     current: 'en',
     available: [
@@ -9,4 +9,4 @@ export default (): II18nState =>
         it: 'Italiano',
       },
     ],
-  } as II18nState)
+  } as ILocalState)

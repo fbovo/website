@@ -1,9 +1,9 @@
-import { IThemeState } from '.'
+import { ILocalState } from '.'
 
-export default (): IThemeState =>
+export default (): ILocalState =>
   ({
     current: 'defaultTheme',
     settings: {},
     animations: true,
     debug: false,
-  } as IThemeState)
+  } as ILocalState)

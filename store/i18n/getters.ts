@@ -1,7 +1,7 @@
 import { GetterTree } from 'vuex'
-import { II18nState } from '.'
+import { ILocalState } from '.'
 import { IRootState } from '~/store'
 
-const getters: GetterTree<II18nState, IRootState> = {}
+const getters: GetterTree<ILocalState, IRootState> = {}
 
 export default getters

@@ -18,13 +18,13 @@
               '-skills': item.anchor === '#skills',
               '-projects': item.anchor === '#projects',
               '-education': item.anchor === '#education',
-              '-active': item.anchor === active,
+              '-active': isActive(item.anchor),
             }"
-            @click="active = item.anchor"
+            @click="setActive(item.anchor, true)"
           />
           <m-aboutOverlay
-            :class="{ '-active': item.anchor === active }"
-            @close="active = ''"
+            :class="{ '-active': isActive(item.anchor) }"
+            @close="setActive(`${item.anchor}-close`)"
           >
             <m-aboutSkills v-if="item.anchor === '#skills'" />
             <m-aboutProjects v-else-if="item.anchor === '#projects'" />
@@ -37,27 +37,39 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue, { VueConstructor } from 'vue'
+import Analytics from '~/mixins/analytics'
 import data from '~/data/menu/about'
 
-export default Vue.extend({
+export default (Vue as VueConstructor<
+  Vue & InstanceType<typeof Analytics>
+>).extend({
   name: 'HomeAboutOrganism',
+
+  mixins: [Analytics],
 
   data: () => data,
 
-  computed: {
-    active: {
-      get(): string {
-        return this.$store.state.menu.about.active || ''
-      },
-      set(payload: string): void {
-        this.$store.commit('menu/setActive', {
-          menu: 'about',
-          payload,
-          modal: true,
-          overlay: false,
-        })
-      },
+  methods: {
+    isActive(anchor: string) {
+      const item = `about${anchor}`
+
+      return (
+        this.$store.state.modal[item] && this.$store.state.modal[item].active
+      )
+    },
+    setActive(item: string, track: boolean = false) {
+      const payload: { [key: string]: boolean } = {}
+
+      for (let i = 0; i < this.items.length; i++) {
+        const { anchor } = this.items[i]
+
+        payload[`about${anchor}`] = anchor === item
+      }
+
+      this.$store.commit('modal/setActive', payload)
+
+      if (track) this.trackEvent(item.replace('#', 'click.home-about-'))
     },
   },
 })

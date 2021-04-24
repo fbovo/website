@@ -8,7 +8,7 @@ import Vue from 'vue'
 export default Vue.extend({
   computed: {
     hasModal(): boolean {
-      return this.$store.getters['menu/hasModal'] || false
+      return this.$store.getters['modal/hasModal'] || false
     },
   },
 

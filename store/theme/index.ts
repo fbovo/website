@@ -1,4 +1,4 @@
-export interface IThemeState {
+export interface ILocalState {
   current: string
   settings: Record<string, any>
   animations: boolean

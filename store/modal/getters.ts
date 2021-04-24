@@ -1,18 +1,19 @@
 import { GetterTree } from 'vuex'
-import { IMenuState } from './'
+import { ILocalState } from '.'
 import { IRootState } from '~/store'
 
-const getters: GetterTree<IMenuState, IRootState> = {
+const getters: GetterTree<ILocalState, IRootState> = {
   hasModal: (state): boolean => {
     for (const menu in state) {
-      if (state[menu].modal) return true
+      if (state[menu].active) return true
     }
 
     return false
   },
+
   hasOverlay: (state): boolean => {
     for (const menu in state) {
-      if (state[menu].overlay) return true
+      if (state[menu].active && state[menu].overlay) return true
     }
 
     return false
