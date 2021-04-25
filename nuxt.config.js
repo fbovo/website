@@ -131,6 +131,8 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    // https://github.com/nuxt-community/proxy-module
+    '@nuxtjs/proxy',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
   ],
@@ -160,12 +162,15 @@ export default {
     ],
   },
 
-  // PWA configuration (// https://go.nuxtjs.dev/pwa)
+  // @nuxtjs/proxy configuration (https://github.com/nuxt-community/proxy-module)
+  proxy: [['http://localhost:9000/graphql', { ws: false }]],
+
+  // @nuxtjs/pwa configuration (https://go.nuxtjs.dev/pwa)
   pwa: {
     manifest: {
       name: 'Filippo Bovo',
       short_name: 'F/B',
-      description: 'Filippo Bovo | Freelance full-stack developer‎',
+      description: 'Filippo Bovo | Freelance e-commerce consultant‎',
       background_color: '#e5e5e5',
       lang: 'en',
       publicPath: '/_nuxt/',
