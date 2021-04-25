@@ -8,12 +8,12 @@ const data: StaticMenuData.INode = {
     {
       label: 'Projects',
       anchor: '#projects',
-      icon: 'Jupiter',
+      icon: 'Neptune',
     },
     {
       label: 'Education and Awards',
       anchor: '#education',
-      icon: 'Jupiter',
+      icon: 'Venus',
     },
   ],
 }
