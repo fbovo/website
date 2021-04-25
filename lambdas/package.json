@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "apollo-server-lambda": "^2.23.0",
+    "encoding": "^0.1.13",
     "graphql": "^15.5.0"
   },
   "devDependencies": {
