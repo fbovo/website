@@ -16,8 +16,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 3.5em;
-    height: 3.5em;
+    width: 15vw;
+    max-width: 4.5em;
+    height: 15vw;
+    max-height: 4.5em;
     border-radius: 50%;
     background: var(--grey-concrete);
     transition: transform .35s cubic-bezier(0.65, 0, .075, 1);
@@ -25,13 +27,16 @@
     opacity: 0;
   }
 
+  @include media('>small') {
+    font-size: $h4;
+  }
+
   svg {
     width: 15vw;
-    max-width: 3.5em;
+    max-width: 4.5em;
   }
 
   strong {
-    font-size: $h5;
     font-weight: $regular;
     display: inline-block;
     margin-left: 1em;

@@ -1,12 +1,14 @@
 <template>
   <footer class="o-footer">
-    <div class="o-footer__social"></div>
-    <div class="o-footer__menu">
-      <ul>
-        <li>
-          <n-link to="/privacy-policy">Privacy policy</n-link>
-        </li>
-      </ul>
+    <div class="m-footer">
+      <div class="m-footer__social"></div>
+      <div class="m-footer__menu">
+        <ul>
+          <li>
+            <n-link to="/privacy-policy">Privacy policy</n-link>
+          </li>
+        </ul>
+      </div>
     </div>
   </footer>
 </template>
